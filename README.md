@@ -146,11 +146,11 @@ After the workflow execution is completed all the steps successfully in Airflow 
 
    1. Use default access key=`AKIAIOSFODNN7EXAMPLE` and secret key=`wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY` to login
 
-      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-bucket.PNG)
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-login.PNG)
 
    2. After login click the `rating-store` bucket to view data partitioned by date and store.
 
-      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-login.PNG)
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-bucket.PNG)
 
 2. Access `Jupyter` Notebook to query the results from database.
 
