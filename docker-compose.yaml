@@ -23,8 +23,7 @@ x-airflow-common:
 
 services:
   ratingsapi:
-    build: ./ratings-mock-api
-    image: ratingsapi:latest
+    image: manoj/ratings-api
     ports:
       - "5000:5000"
     volumes:
@@ -88,18 +87,13 @@ services:
     restart: always
   
   notebook:
-    image: jupyter/all-spark-notebook
+    image: manoj/jupyter-notebook
     ports:
       - 8888:8888
-      - 4040:4040
-    environment:
-      - PYSPARK_SUBMIT_ARGS=--packages com.amazonaws:aws-java-sdk-bundle:1.11.819,org.apache.hadoop:hadoop-aws:3.2.0 pyspark-shell
-      - GRANT_SUDO=yes
     volumes:
       - ./work:/home/jovyan/work
      
    
-
 volumes:
   postgres-db-volume:
   minio-data-volume:
