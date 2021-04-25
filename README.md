@@ -140,9 +140,21 @@ Trigger the workflow DAG created in Airflow to execute the sequence of  steps to
 
 ### Accessing the results
 
-After the workflow execution is completed all the steps successfully in Airflow then we can query data using `SQL` from the `Jupyter` Notebook provided.
+After the workflow execution is completed all the steps successfully in Airflow then we can check the data stored in `object store` and query data using `SQL`.
 
-1. To access the `Jupyter` Notebook need to fetch the access token from docker container logs as below.
+1. MinIO Server comes with an embedded web based object browser. Point your web browser to http://localhost:9000 to browser the stored files.
+
+   1. Use default access key=`AKIAIOSFODNN7EXAMPLE` and secret key=`wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY` to login
+
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-bucket.PNG)
+
+   2. After login click the `rating-store` bucket to view data partitioned by date and store.
+
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/minio-login.PNG)
+
+2. Access `Jupyter` Notebook to query the results from database.
+
+   - To access the `Jupyter` Notebook need to fetch the access token from docker container logs as below.
 
    - Execute `docker ps` command to find the `Container Id` of image `manoj/jupyter-notebook` 
 
