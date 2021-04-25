@@ -77,10 +77,6 @@ In the second terminal you can check the condition of the containers.
 
 ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/containers-init.PNG)
 
-```bash
-docker-compose up
-```
-
 ### Accessing the environment
 
 After the containers are started correctly, the environments can be accessed as below.
