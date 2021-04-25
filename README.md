@@ -75,7 +75,7 @@ docker-compose up
 
 In the second terminal you can check the condition of the containers.
 
-![](img\containers-init.PNG)
+![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/containers-init.PNG)
 
 ```bash
 docker-compose up
@@ -94,11 +94,11 @@ Trigger the workflow DAG created in Airflow to execute the sequence of  steps to
 
 1. Enable the DAG `app_rating_elt` from UI from Airflow home page
 
-   ![](img\dag-enable.PNG)
+   ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/dag-enable.PNG)
 
 2. Trigger the DAG `app_rating_elt` from the Actions on top right side of Airflow UI.   
 
-   ![](img\dag-trigger.PNG)
+   ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/dag-trigger.PNG)
 
    - After clicking the Trigger button provide the the configuration  `{ "sd": "2021-04-01", "ed": "2021-04-11"}` 
    - Then click the Trigger Button below.
@@ -106,18 +106,18 @@ Trigger the workflow DAG created in Airflow to execute the sequence of  steps to
 3. Monitor the UI for the progress of steps completion.
 
    1. Top open the DAG  click the DAG name `app_rating_elt` and it will show the steps and click  `Graph View` for better view.
-   
-      ![](img\dag-graph.PNG)
-   
+
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/dag-graph.PNG)
+
    2. To check the logs of particular step in dag from `Graph View` click a step
-   
+
       1. click `extract_ratings` step to views it execution log
-   
-         ![](img\dag-step-log.PNG)
-   
+
+         ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/dag-step-log.PNG)
+
    3. After steps are executed successfully as below then we can view the results in table
-   
-      ![](img\dag-success.PNG)
+
+      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/dag-success.PNG)
 
 ### Accessing the results
 
@@ -127,15 +127,15 @@ After the workflow execution is completed all the steps successfully in Airflow 
 
    - Execute `docker ps` command to find the `Container Id` of image `manoj/jupyter-notebook` 
 
-     ![](img\jupyter-container-id.PNG)
+     ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/jupyter-container-id.PNG)
 
    - Using the `Container Id` check the logs of the container for access token URL
 
-     ![](img\jupyter-token.PNG)
+     ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/jupyter-token.PNG)
 
    - Using the URL with access token from logs access Jupyter web interface and open the Notebook from `product-leader.ipynb` from the folder `work`. 
 
-     ![](img\jupyter-results.PNG)
+     ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/jupyter-results.PNG)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
