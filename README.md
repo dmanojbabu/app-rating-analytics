@@ -156,7 +156,14 @@ After the workflow execution is completed all the steps successfully in Airflow 
 
      ![](https://raw.githubusercontent.com/dmanojbabu/app-rating-analytics/main/img/jupyter-results.PNG)
 
+
+## Clean up resources
+To stop and delete containers, delete volumes with database data and downloaded images, run:
+
+`docker-compose down --volumes --rmi all` 
+
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
